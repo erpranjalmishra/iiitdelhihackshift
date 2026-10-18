@@ -1,0 +1,23 @@
+{
+  "name": "nadi",
+  "version": "1.0.0",
+  "description": "Nadi — contactless vitals from any camera + AI triage with a deterministic safety guardrail.",
+  "type": "module",
+  "private": true,
+  "main": "server/index.mjs",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/index.mjs",
+    "dev": "node --watch --disable-warning=ExperimentalWarning server/index.mjs",
+    "seed": "node --disable-warning=ExperimentalWarning scripts/seed.mjs",
+    "test": "node --disable-warning=ExperimentalWarning --test tests/*.test.mjs",
+    "certs": "node scripts/make-certs.mjs"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^2.30.0",
+    "qrcode": "^1.5.4"
+  }
+}
